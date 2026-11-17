@@ -1,22 +1,11 @@
 # Da Fan — personal academic website
 
-Website: https://dalambda.github.io/
+https://dafanphil.com
 
-A static academic website in the philosophy of language, hosted on GitHub Pages.
+Static website hosted on GitHub Pages from the root of `main`.
 
-## Pages
+Pages: `index.html`, `research.html`, `talks.html`, `teaching.html`, `cv.html`, and `contact.html`. Shared styling is in `styles.css`; `fonts/` includes self-hosted fonts and licenses. `cv.pdf` is the public downloadable CV.
 
-- `index.html`: introduction and contact information
-- `research.html`: journal articles and dissertation
-- `talks.html`: recent presentations and expandable earlier talks
-- `teaching.html`: upcoming, recent, and earlier teaching
-- `cv.html`: curriculum vitae, education, and academic service
-- `contact.html`: contact information and PhilPeople profile
-- `styles.css`: shared styling
-- `cv.pdf`: November 2026 CV
+Editable CV source is maintained separately in the private `DaLambDa/academic-cv` repository. This public repository contains only the website and compiled CV PDF. Earlier public commits still contain the previously published CV source.
 
-Open `index.html` in a browser to preview the site. Keep all files together so page links, styles, and the CV download resolve correctly. No installation or build step is required.
-
-GitHub Pages publishes from the root of `main`. Updates to that branch publish automatically. The `.nojekyll` file serves these files directly.
-
-The planned custom domain is `dafanphil.com`; it has not been connected yet.
+Preserve `CNAME`, `.nojekyll`, and existing Pages/HTTPS settings. See `AGENTS.md` for coordinated maintenance instructions.
