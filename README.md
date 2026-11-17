@@ -1,19 +1,22 @@
-# Personal academic website
+# Da Fan — personal academic website
 
-Site URL: https://dalambda.github.io/
+Website: https://dalambda.github.io/
 
-A personal academic homepage in the philosophy of language, hosted on GitHub Pages. The design uses serif headings, generous spacing, and a portrait beside the introduction.
+A static academic website in the philosophy of language, hosted on GitHub Pages.
 
-## Editing the site
+## Pages
 
-The complete homepage and its styling are in `index.html`. No installation or build step is required. Open the file in a browser to preview changes. Updates to `main` are published automatically by GitHub Pages.
+- `index.html`: introduction and contact information
+- `research.html`: journal articles and dissertation
+- `talks.html`: recent presentations and expandable earlier talks
+- `teaching.html`: upcoming, recent, and earlier teaching
+- `cv.html`: curriculum vitae, education, and academic service
+- `contact.html`: contact information and PhilPeople profile
+- `styles.css`: shared styling
+- `cv.pdf`: November 2026 CV
 
-All bracketed text is placeholder content. Replace it with your name, affiliation, biography, papers, teaching information, contact details, and profile links. The portrait is optional.
+Open `index.html` in a browser to preview the site. Keep all files together so page links, styles, and the CV download resolve correctly. No installation or build step is required.
 
-Navigation and expandable abstracts work. Bracketed profile, paper, and CV labels are plain text until real links are available.
+GitHub Pages publishes from the root of `main`. Updates to that branch publish automatically. The `.nojekyll` file serves these files directly.
 
-## Hosting
-
-GitHub Pages publishes from the root of `main`. The `.nojekyll` file serves the homepage directly as a static website.
-
-The planned custom domain is `dafanphil.com`. It is not connected yet. Verify ownership in GitHub, add the custom domain in the repository's Pages settings, then configure Cloudflare DNS and HTTPS.
+The planned custom domain is `dafanphil.com`; it has not been connected yet.

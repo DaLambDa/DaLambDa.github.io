@@ -3,207 +3,45 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Personal academic website — philosophy of language.">
+  <meta name="description" content="Da Fan (樊达), Assistant Professor at Shandong University. Philosophy of language and epistemology.">
   <meta name="color-scheme" content="light">
-  <title>Your Name · Philosophy</title>
-  <style>
-    :root {
-      --ink: #292c2d;
-      --muted: #747572;
-      --link: #41657d;
-      --line: #e4e4df;
-      --paper: #f3f3ef;
-      --serif: Georgia, "Times New Roman", serif;
-      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 32px; }
-    body { margin: 0; background: #fff; color: var(--ink); font: 16px/1.8 var(--sans); -webkit-font-smoothing: antialiased; }
-    a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 4px; }
-    a:hover { color: var(--ink); }
-    a:focus-visible, summary:focus-visible { outline: 2px solid var(--link); outline-offset: 6px; border-radius: 1px; }
-    .shell { width: min(100% - 96px, 960px); margin-inline: auto; }
-    .skip-link { position: absolute; top: -100px; left: 20px; padding: 8px 16px; background: white; z-index: 2; }
-    .skip-link:focus { top: 12px; }
-    .masthead { padding-block: 62px 27px; display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; border-bottom: 1px solid var(--line); }
-    .name { color: var(--ink); font: normal 46px/1.12 var(--serif); letter-spacing: -1.4px; text-decoration: none; white-space: nowrap; }
-    .discipline { margin: 10px 0 0; font-size: 12px; color: var(--muted); letter-spacing: 1.3px; }
-    nav { display: flex; flex-wrap: wrap; gap: 26px; padding-bottom: 3px; font-size: 13px; }
-    nav a { color: #565a5b; text-decoration: none; }
-    nav a:hover { color: var(--link); text-decoration: underline; }
-    .introduction { display: grid; grid-template-columns: 228px minmax(0, 1fr); gap: 70px; padding-block: 66px 72px; }
-    figure { margin: 0; }
-    .portrait { aspect-ratio: 4 / 5; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 25px; color: #8b8d87; background: var(--paper); border: 1px solid #e8e8e1; }
-    .portrait svg { width: 38px; height: 38px; stroke: #a5aaa2; }
-    .portrait span { font: italic 15px/1.5 var(--serif); }
-    figcaption { margin-top: 12px; color: var(--muted); font-size: 11px; line-height: 1.5; }
-    .affiliation { margin: -5px 0 16px; font-size: 12px; letter-spacing: .25px; color: var(--muted); }
-    h1, h2, h3 { font-family: var(--serif); font-weight: normal; }
-    h1 { font-size: 33px; line-height: 1.25; letter-spacing: -.7px; margin: 0 0 24px; }
-    .bio p { margin: 0 0 18px; }
-    .placeholder { color: #70726f; }
-    .profile-links { display: flex; flex-wrap: wrap; gap: 9px 18px; margin-top: 29px; color: var(--link); font-size: 13px; }
-    .profile-links span + span::before { content: "·"; margin-right: 18px; color: #b4b5af; }
-    .section { display: grid; grid-template-columns: 228px minmax(0, 1fr); gap: 70px; border-top: 1px solid var(--line); padding-block: 43px 49px; }
-    h2 { font-size: 27px; line-height: 1.2; letter-spacing: -.4px; margin: 0; }
-    .section-note { max-width: 180px; margin-top: 13px; font-size: 12px; line-height: 1.65; color: var(--muted); }
-    .papers { margin: 0; padding: 0; list-style: none; }
-    .paper { padding-block: 0 25px; }
-    .paper + .paper { border-top: 1px solid var(--line); padding-top: 25px; }
-    .paper:last-child { padding-bottom: 0; }
-    .paper-meta { display: flex; gap: 12px; margin-bottom: 5px; font-size: 11px; color: var(--muted); letter-spacing: .5px; }
-    .paper-meta span + span { border-left: 1px solid #cfd1cc; padding-left: 12px; }
-    h3 { font-size: 21px; line-height: 1.4; letter-spacing: -.2px; margin: 0 0 5px; }
-    .citation { font-size: 13px; line-height: 1.7; margin: 0; color: var(--muted); }
-    .paper-actions { display: flex; align-items: baseline; gap: 19px; margin-top: 12px; font-size: 12px; color: var(--link); }
-    details { max-width: 100%; }
-    summary { cursor: pointer; width: fit-content; color: var(--link); font-size: 12px; }
-    summary::marker { font-size: 9px; }
-    details p { padding-top: 8px; margin: 0; font-size: 13px; line-height: 1.75; color: var(--muted); }
-    .pdf-placeholder { font-size: 12px; color: var(--link); white-space: nowrap; }
-    .course + .course { margin-top: 23px; }
-    .course h3 { font-size: 19px; margin-bottom: 2px; }
-    .course p, .small-copy { margin: 0; font-size: 14px; color: var(--muted); }
-    .cv-caption { margin-top: 10px; color: var(--link); font-size: 13px; }
-    .contact-copy { margin: 0 0 10px; font-size: 14px; color: var(--muted); }
-    .email { margin: 0; color: var(--link); font-size: 15px; overflow-wrap: anywhere; }
-    footer { border-top: 1px solid var(--line); padding-block: 23px 37px; display: flex; flex-wrap: wrap; gap: 10px 25px; justify-content: space-between; font-size: 11px; color: var(--muted); }
-    .footer-right { display: flex; gap: 24px; }
-    footer a { color: var(--muted); text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
-    @media (min-width: 1450px) { .shell { max-width: 1000px; } .masthead { padding-top: 76px; } }
-    @media (max-width: 800px) {
-      .shell { width: min(100% - 56px, 680px); }
-      .masthead { padding-top: 38px; align-items: flex-start; flex-direction: column; gap: 24px; }
-      .name { font-size: 42px; }
-      nav { gap: 24px; }
-      .introduction { grid-template-columns: 170px minmax(0, 1fr); gap: 36px; padding-block: 43px 48px; }
-      .section { grid-template-columns: 170px minmax(0, 1fr); gap: 36px; }
-      h1 { font-size: 29px; }
-      body { font-size: 15px; }
-      .profile-links span + span::before { display: none; }
-    }
-    @media (max-width: 560px) {
-      .shell { width: calc(100% - 44px); }
-      .masthead { padding-top: 31px; padding-bottom: 22px; gap: 24px; }
-      .name { font-size: 40px; }
-      .discipline { font-size: 11px; }
-      nav { width: 100%; gap: 0; justify-content: space-between; font-size: 12px; }
-      .introduction { grid-template-columns: 1fr; gap: 31px; padding-top: 35px; }
-      figure { width: 148px; }
-      .portrait { gap: 11px; padding: 14px; }
-      .portrait svg { width: 30px; height: 30px; }
-      .portrait span { font-size: 13px; }
-      figcaption { display: none; }
-      h1 { font-size: 31px; margin-bottom: 22px; }
-      .affiliation { margin-bottom: 12px; }
-      .section { grid-template-columns: 1fr; gap: 25px; padding-block: 32px 37px; }
-      .section-note { display: none; }
-      h2 { font-size: 27px; }
-      h3 { font-size: 21px; }
-      .profile-links { gap: 10px 16px; margin-top: 23px; }
-      footer { padding-bottom: 29px; }
-      .footer-right { gap: 18px; }
-    }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-    @media print {
-      .shell { width: 100%; }
-      .masthead { padding-top: 0; }
-      nav, .skip-link, .footer-right, .portrait svg { display: none; }
-      .introduction, .section { break-inside: avoid; gap: 35px; grid-template-columns: 160px 1fr; padding-block: 25px; }
-      details p { display: block; }
-    }
-  </style>
+  <title>Da Fan · Philosophy</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body id="top">
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="shell">
     <header class="masthead">
       <div>
-        <a class="name" href="#top">Your Name</a>
+        <a class="name" href="index.html">Da Fan <span class="native-name" lang="zh-Hans">樊达</span></a>
         <p class="discipline">PHILOSOPHY OF LANGUAGE</p>
       </div>
       <nav aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#cv">CV</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html" aria-current="page">About</a>
+        <a href="research.html">Research</a>
+        <a href="talks.html">Talks</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="cv.html">CV</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </header>
-    <main id="main">
-      <section class="introduction" id="about" aria-labelledby="about-heading">
-        <figure>
-          <div class="portrait" role="img" aria-label="Placeholder for your portrait">
-            <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="5" y="5" width="38" height="38" rx="1" stroke-width="1"/><circle cx="19" cy="18" r="4" stroke-width="1"/><path d="m6 34 10-9 8 7 8-12 10 15" stroke-width="1"/></svg>
-            <span>[Your photograph]</span>
+    <main id="main" class="home-page">
+      <article class="home-introduction" aria-labelledby="intro-heading">
+        <h1 class="visually-hidden" id="intro-heading">About Da Fan</h1>
+        <p>I am an Assistant Professor in the School of Philosophy and Social Development at Shandong University. My research is in the philosophy of language and epistemology, with a focus on formal pragmatics, semantics, conditionals, and epistemic contextualism.</p>
+        <p>I received my Ph.D. in Philosophy from the University of California, Davis in 2021. Before joining Shandong in 2025, I was a postdoctoral research fellow at Wuhan University from 2022 to 2025. My other interests include logic, causation, and philosophy of mind.</p>
+        <section class="home-contact" aria-labelledby="home-contact-heading">
+          <h2 id="home-contact-heading">Contact</h2>
+          <div class="home-contact-grid">
+            <address>School of Philosophy and Social Development<br>Shandong University<br>Jinan, Shandong, China</address>
+            <div class="home-contact-links"><a href="mailto:phi.fanda@gmail.com">phi.fanda@gmail.com</a><a href="https://philpeople.org/profiles/da-fan">PhilPeople</a></div>
           </div>
-          <figcaption>[Optional photograph credit]</figcaption>
-        </figure>
-        <div class="bio">
-          <p class="affiliation">[Position] · [Institution]</p>
-          <h1 id="about-heading">Philosophy of language</h1>
-          <p>I work in the philosophy of language. <span class="placeholder">[Introduce your main questions, research interests, and current projects in a few sentences.]</span></p>
-          <p class="placeholder">[A short second paragraph about your academic background, other philosophical interests, or the work you are doing now.]</p>
-          <div class="profile-links" aria-label="Placeholders for profile links">
-            <span>[Email]</span><span>[PhilPapers]</span><span>[Google Scholar]</span>
-          </div>
-        </div>
-      </section>
-      <section class="section" id="research" aria-labelledby="research-heading">
-        <div>
-          <h2 id="research-heading">Selected writing</h2>
-          <p class="section-note">[Publications and work in progress]</p>
-        </div>
-        <ol class="papers">
-          <li class="paper">
-            <div class="paper-meta"><span>[Year]</span><span>[Published]</span></div>
-            <h3>[Title of a published paper]</h3>
-            <p class="citation"><i>[Journal or book title]</i>, [volume and pages].</p>
-            <div class="paper-actions">
-              <details><summary>Abstract</summary><p>[Your paper's abstract will appear here. This section can be expanded or collapsed, keeping the publication list easy to scan.]</p></details>
-              <span class="pdf-placeholder">[PDF link]</span>
-            </div>
-          </li>
-          <li class="paper">
-            <div class="paper-meta"><span>[Year]</span><span>[Forthcoming]</span></div>
-            <h3>[Title of a forthcoming paper]</h3>
-            <p class="citation">With [coauthor, if applicable]. <i>[Journal or book title]</i>.</p>
-            <div class="paper-actions">
-              <details><summary>Abstract</summary><p>[Add the abstract or a brief description of the paper here.]</p></details>
-              <span class="pdf-placeholder">[PDF link]</span>
-            </div>
-          </li>
-          <li class="paper">
-            <div class="paper-meta"><span>[Year]</span><span>[Work in progress]</span></div>
-            <h3>[Title of a current project]</h3>
-            <p class="citation">[Manuscript or project information].</p>
-            <div class="paper-actions">
-              <details><summary>Abstract</summary><p>[A short description of the questions and arguments in this project.]</p></details>
-              <span class="pdf-placeholder">[Draft link]</span>
-            </div>
-          </li>
-        </ol>
-      </section>
-      <section class="section" id="teaching" aria-labelledby="teaching-heading">
-        <div><h2 id="teaching-heading">Teaching</h2></div>
-        <div>
-          <div class="course"><h3>[Course title]</h3><p>[Institution] · [Term and year]</p></div>
-          <div class="course"><h3>[Course title]</h3><p>[Institution] · [Term and year]</p></div>
-        </div>
-      </section>
-      <section class="section" id="cv" aria-labelledby="cv-heading">
-        <div><h2 id="cv-heading">Curriculum vitae</h2></div>
-        <div><p class="small-copy">[A brief description of your current role and academic background.]</p><div class="cv-caption">[Download CV — PDF]</div></div>
-      </section>
-      <section class="section" id="contact" aria-labelledby="contact-heading">
-        <div><h2 id="contact-heading">Contact</h2></div>
-        <div><p class="contact-copy">[Department] · [Institution]</p><p class="email">[your.email@institution.edu]</p></div>
-      </section>
+        </section>
+      </article>
     </main>
     <footer>
-      <span>[Your Name]</span>
-      <div class="footer-right"><span>dafanphil.com</span><a href="#top">Back to top ↑</a></div>
+      <span>Da Fan · <span lang="zh-Hans">樊达</span></span>
+      <span>dafanphil.com</span>
     </footer>
   </div>
 </body>
