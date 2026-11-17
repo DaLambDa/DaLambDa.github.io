@@ -1,7 +1,7 @@
-/* Use locally installed MingLiU for CJK characters, including untagged text. */
+/* Self-hosted Source Han Serif Regular for all CJK characters. */
 @font-face {
   font-family: "Site Chinese";
-  src: local("MingLiU"), local("MingLiU-ExtB"), local("細明體");
+  src: url("fonts/SourceHanSerifCN-Regular.otf") format("opentype");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -45,9 +45,9 @@
   --muted: #747572;
   --link: #41657d;
   --line: #e4e4df;
-  --chinese: "MingLiU", "MingLiU-ExtB", "細明體", "Songti SC", "Noto Serif CJK SC", serif;
-  --serif: "Site Chinese", "Libertinus Serif", "MingLiU", "MingLiU-ExtB", Georgia, "Times New Roman", "Songti SC", "Noto Serif CJK SC", serif;
-  --sans: "Site Chinese", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "MingLiU", "Songti SC", "Noto Serif CJK SC", sans-serif;
+  --chinese: "Site Chinese", "Songti SC", "Noto Serif CJK SC", serif;
+  --serif: "Site Chinese", "Libertinus Serif", Georgia, "Times New Roman", "Songti SC", "Noto Serif CJK SC", serif;
+  --sans: "Site Chinese", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Songti SC", "Noto Serif CJK SC", sans-serif;
 }
 :lang(zh) { font-family: var(--chinese); }
 * { box-sizing: border-box; }
